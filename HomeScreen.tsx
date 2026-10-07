@@ -13,10 +13,12 @@ export default function HomeScreen({ navigation }: any) {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
 
+        {/* Logo */}
         <View style={styles.logoCircle}>
           <Text style={styles.logoText}>P</Text>
         </View>
 
+        {/* Shop Name */}
         <Text style={styles.title}>
           Purple Shop
         </Text>
@@ -25,6 +27,7 @@ export default function HomeScreen({ navigation }: any) {
           Find something you love.
         </Text>
 
+        {/* Welcome Card */}
         <View style={styles.card}>
           <Text style={styles.cardTitle}>
             Welcome!
@@ -38,8 +41,25 @@ export default function HomeScreen({ navigation }: any) {
           <Text style={styles.featuredText}>
             ✨ Featured Products
           </Text>
+
+          <View style={styles.locationBox}>
+            <Text style={styles.locationIcon}>
+              📍
+            </Text>
+
+            <View>
+              <Text style={styles.locationLabel}>
+                Shop Location
+              </Text>
+
+              <Text style={styles.locationText}>
+                Calbayog City
+              </Text>
+            </View>
+          </View>
         </View>
 
+        {/* Browse Button */}
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('Products')}
@@ -124,6 +144,32 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: '#9B7BC1',
     marginTop: 15,
+  },
+
+  locationBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#F8F5FC',
+    borderRadius: 12,
+    padding: 12,
+    marginTop: 15,
+  },
+
+  locationIcon: {
+    fontSize: 20,
+    marginRight: 10,
+  },
+
+  locationLabel: {
+    fontSize: 11,
+    color: '#9A8FA8',
+    marginBottom: 2,
+  },
+
+  locationText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#4B3B61',
   },
 
   button: {
