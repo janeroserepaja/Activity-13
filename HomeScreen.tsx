@@ -1,3 +1,4 @@
+```tsx
 import React from 'react';
 import {
   SafeAreaView,
@@ -32,6 +33,10 @@ export default function HomeScreen({ navigation }: any) {
           <Text style={styles.cardText}>
             Explore our collection of simple and
             beautiful purple-themed products.
+          </Text>
+
+          <Text style={styles.featuredText}>
+            ✨ Featured Products
           </Text>
         </View>
 
@@ -114,6 +119,13 @@ const styles = StyleSheet.create({
     color: '#7D7188',
   },
 
+  featuredText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#9B7BC1',
+    marginTop: 15,
+  },
+
   button: {
     backgroundColor: '#9B7BC1',
     borderRadius: 14,
@@ -128,3 +140,4 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
+```
